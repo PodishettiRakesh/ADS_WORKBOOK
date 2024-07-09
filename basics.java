@@ -11,7 +11,7 @@ public class basics {
             System.out.println("given number is even");
         }else{
             System.out.println("it is odd number");
-}
+        }
     }
 }
 
