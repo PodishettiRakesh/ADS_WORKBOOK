@@ -7,7 +7,7 @@ int main() {
 
     // Prompt the user for input
     printf("Enter a string: ");
-    gets(str); // Use gets to read the input string (note: gets is unsafe and not recommended in real applications)
+    gets(str); // Use gets to read the input string
 
     // Calculate the length of the string
     while (str[length] != '\0') {
