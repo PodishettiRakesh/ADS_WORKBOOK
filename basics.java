@@ -206,6 +206,17 @@ public class Basics {
         }
     }
 
+    
+    private int indexOf(String element) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].equals(element)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
     public void printArray() {
         System.out.print("Array elements: ");
         for (int i = 0; i < size; i++) {
