@@ -243,13 +243,53 @@ import java.util.Scanner;
 
 
 // Write a Java program that demonstrates autoboxing of an `int` to an `Integer`.
+// public class Basics {
+
+//     public static void main(String[] args) {
+//         int primitiveInt = 42;
+//         Integer boxedInteger = primitiveInt; // Autoboxing
+
+//         System.out.println("Primitive int: " + primitiveInt);
+//         System.out.println("Boxed Integer: " + boxedInteger);
+//     }
+// }
+
+// Write a Java program that takes a `double` and casts it to an `int`, and then autoboxes it to an `Integer`.
+// public class Basics {
+
+//     public static void main(String[] args) {
+//         double doubleValue = 3.14;
+//         int intValue = (int) doubleValue; // Casting double to int
+//         Integer boxedInteger = intValue; // Autoboxing
+
+//         System.out.println("Original double value: " + doubleValue);
+//         System.out.println("Casted int value: " + intValue);
+//         System.out.println("Boxed Integer: " + boxedInteger);
+//     }
+// }
+
+
+
+// Write a Java program that involves creating a function to calculate the sum of an array of `Integer` 
+// objects, demonstrating unboxing in the process.
+
+import java.util.Arrays;
+
 public class Basics {
 
-    public static void main(String[] args) {
-        int primitiveInt = 42;
-        Integer boxedInteger = primitiveInt; // Autoboxing
+    public static int sum(Integer[] array) {
+        int sum = 0;
+        for (Integer num : array) {
+            sum += num; // Unboxing Integer to int
+        }
+        return sum;
+    }
 
-        System.out.println("Primitive int: " + primitiveInt);
-        System.out.println("Boxed Integer: " + boxedInteger);
+    public static void main(String[] args) {
+        Integer[] numbers = {1, 2, 3, 4, 5};
+        int totalSum = sum(numbers);
+
+        System.out.println("Array elements: " + Arrays.toString(numbers));
+        System.out.println("Sum of array elements: " + totalSum);
     }
 }
