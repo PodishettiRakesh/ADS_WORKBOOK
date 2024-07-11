@@ -148,23 +148,85 @@ import java.util.Scanner;
 // - Task: Create a Java class with a static method that 
 // calculates the area of a rectangle using parameters for width and height.
 
+// public class Basics {
+
+//     private int width;
+//     private int height;
+
+//     public Basics(int width, int height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+
+//     public static int calculateArea(int width, int height) {
+//         return width * height;
+//     }
+
+//     public static void main(String[] args) {
+//         Basics rectangle = new Basics(5, 10);
+//         int area = calculateArea(rectangle.width, rectangle.height);
+//         System.out.println("The area of the rectangle is: " + area);
+//     }
+// }
+
+
+
+// Implement a Java class with a private array of Strings. Include methods to add a string to the array and another 
+// method to remove a string from the array by shifting all elements.
 public class Basics {
+    private String[] array;
+    private int size;
+    private int capacity;
 
-    private int width;
-    private int height;
-
-    public Basics(int width, int height) {
-        this.width = width;
-        this.height = height;
+    public Basics(int capacity) {
+        this.capacity = capacity;
+        this.array = new String[capacity];
+        this.size = 0;
     }
 
-    public static int calculateArea(int width, int height) {
-        return width * height;
+    public void add(String element) {
+        if (size < capacity) {
+            array[size] = element;
+            size++;
+        } else {
+            System.out.println("Array is full. Cannot add more elements.");
+        }
+    }
+
+    public void remove(String element) {
+        int index = indexOf(element);
+        if (index != -1) {
+            for (int i = index; i < size - 1; i++) {
+                array[i] = array[i + 1];
+            }
+            array[size - 1] = null;
+            size--;
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+    }
+
+    public void printArray() {
+        System.out.print("Array elements: ");
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        Basics rectangle = new Basics(5, 10);
-        int area = calculateArea(rectangle.width, rectangle.height);
-        System.out.println("The area of the rectangle is: " + area);
+        Basics strArray = new Basics(10);
+
+        strArray.add("rakesh");
+        strArray.add("keerthi");
+        strArray.add("kavya");
+        strArray.add("ramudu");
+        strArray.add("nithin");
+
+        strArray.printArray();
+
+        strArray.remove("kavya");
+        strArray.printArray();
     }
 }
+
