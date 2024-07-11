@@ -328,40 +328,40 @@ import java.util.Scanner;
 // their states using setters, and prints their states using getters. Include 
 // an explanation of how objects are stored in memory.
 
-public class Basics {
-    private String name;
+// public class Basics {
+//     private String name;
 
-    public Basics(String name) {
-        this.name = name;
-    }
+//     public Basics(String name) {
+//         this.name = name;
+//     }
 
-    public String getName() {
-        return name;
-    }
+//     public String getName() {
+//         return name;
+//     }
 
-    public void setName(String newName) {
-        this.name = newName;
-    }
+//     public void setName(String newName) {
+//         this.name = newName;
+//     }
 
-    public static void main(String[] args) {
-        Basics obj1 = new Basics("rakesh");
-        Basics obj2 = new Basics("keerthi");
-        Basics obj3 = new Basics("kavya");
+//     public static void main(String[] args) {
+//         Basics obj1 = new Basics("rakesh");
+//         Basics obj2 = new Basics("keerthi");
+//         Basics obj3 = new Basics("kavya");
 
-        System.out.println("Initial States:");
-        System.out.println("Object 1: " + obj1.getName());
-        System.out.println("Object 2: " + obj2.getName());
-        System.out.println("Object 3: " + obj3.getName());
+//         System.out.println("Initial States:");
+//         System.out.println("Object 1: " + obj1.getName());
+//         System.out.println("Object 2: " + obj2.getName());
+//         System.out.println("Object 3: " + obj3.getName());
 
-        obj1.setName("ramudu");
-        obj2.setName("nithin");
-        obj3.setName("shiva");
+//         obj1.setName("ramudu");
+//         obj2.setName("nithin");
+//         obj3.setName("shiva");
 
-        System.out.println("Updated States:");
-        System.out.println("Object 1: " + obj1.getName());
-        System.out.println("Object 2: " + obj2.getName());
-        System.out.println("Object 3: " + obj3.getName());
-    }
-}
+//         System.out.println("Updated States:");
+//         System.out.println("Object 1: " + obj1.getName());
+//         System.out.println("Object 2: " + obj2.getName());
+//         System.out.println("Object 3: " + obj3.getName());
+//     }
+// }
 
 
