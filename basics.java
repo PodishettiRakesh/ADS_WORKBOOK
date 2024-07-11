@@ -273,23 +273,50 @@ import java.util.Scanner;
 // Write a Java program that involves creating a function to calculate the sum of an array of `Integer` 
 // objects, demonstrating unboxing in the process.
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
-public class Basics {
+// public class Basics {
 
-    public static int sum(Integer[] array) {
-        int sum = 0;
-        for (Integer num : array) {
-            sum += num; // Unboxing Integer to int
-        }
-        return sum;
+//     public static int sum(Integer[] array) {
+//         int sum = 0;
+//         for (Integer num : array) {
+//             sum += num; // Unboxing Integer to int
+//         }
+//         return sum;
+//     }
+
+//     public static void main(String[] args) {
+//         Integer[] numbers = {1, 2, 3, 4, 5};
+//         int totalSum = sum(numbers);
+
+//         System.out.println("Array elements: " + Arrays.toString(numbers));
+//         System.out.println("Sum of array elements: " + totalSum);
+//     }
+// }
+
+
+
+// Write a Java program that creates a class with one 
+// private field and a public getter for that field.
+public class Basics{
+    private String name;
+
+    public Basics(String name){
+        this.name=name;
     }
 
-    public static void main(String[] args) {
-        Integer[] numbers = {1, 2, 3, 4, 5};
-        int totalSum = sum(numbers);
+    public String getName(){
+        return name;
+    }
 
-        System.out.println("Array elements: " + Arrays.toString(numbers));
-        System.out.println("Sum of array elements: " + totalSum);
+    public void setName(String newName){
+        this.name= newName;
+    }
+    public static void main(String[] args){
+        Basics obj = new Basics("rakesh");
+        System.out.println(obj.getName());
+        obj.setName("keerthi");
+        System.out.println(obj.getName());
+
     }
 }
