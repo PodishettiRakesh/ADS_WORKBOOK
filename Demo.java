@@ -51,3 +51,29 @@
 //         System.out.println(obj.reverseString("rakesh"));
 //     }
 // }
+
+
+
+// Task: Write a recursive Java function that determines if a string is a palindrome.
+public class Demo{
+    public String reverseString(String name){
+        if(name.isEmpty()){
+            return name;
+        }else{
+            return reverseString(name.substring(1))+name.charAt(0);
+        }
+    }
+
+    public Boolean isPalindrone(String s){
+        if(s.equalsIgnoreCase(reverseString(s))){
+            return true;
+        }else{
+            return false;
+        }
+    } 
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        System.out.println(obj.isPalindrone("rakesh"));
+        System.out.println(obj.isPalindrone("amma"));
+    }
+}
