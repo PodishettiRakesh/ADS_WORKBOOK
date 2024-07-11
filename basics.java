@@ -298,25 +298,70 @@ import java.util.Scanner;
 
 // Write a Java program that creates a class with one 
 // private field and a public getter for that field.
-public class Basics{
+
+// Extend the program by adding a setter method to the class and demonstrate changing the field's value.
+// public class Basics{
+//     private String name;
+
+//     public Basics(String name){
+//         this.name=name;
+//     }
+
+//     public String getName(){
+//         return name;
+//     }
+
+//     public void setName(String newName){
+//         this.name= newName;
+//     }
+//     public static void main(String[] args){
+//         Basics obj = new Basics("rakesh");
+//         System.out.println(obj.getName());
+//         obj.setName("keerthi");
+//         System.out.println(obj.getName());
+
+//     }
+// }
+
+
+// Write a Java program that creates several objects of the class, changes 
+// their states using setters, and prints their states using getters. Include 
+// an explanation of how objects are stored in memory.
+
+public class Basics {
     private String name;
 
-    public Basics(String name){
-        this.name=name;
+    public Basics(String name) {
+        this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String newName){
-        this.name= newName;
+    public void setName(String newName) {
+        this.name = newName;
     }
-    public static void main(String[] args){
-        Basics obj = new Basics("rakesh");
-        System.out.println(obj.getName());
-        obj.setName("keerthi");
-        System.out.println(obj.getName());
 
+    public static void main(String[] args) {
+        Basics obj1 = new Basics("rakesh");
+        Basics obj2 = new Basics("keerthi");
+        Basics obj3 = new Basics("kavya");
+
+        System.out.println("Initial States:");
+        System.out.println("Object 1: " + obj1.getName());
+        System.out.println("Object 2: " + obj2.getName());
+        System.out.println("Object 3: " + obj3.getName());
+
+        obj1.setName("ramudu");
+        obj2.setName("nithin");
+        obj3.setName("shiva");
+
+        System.out.println("Updated States:");
+        System.out.println("Object 1: " + obj1.getName());
+        System.out.println("Object 2: " + obj2.getName());
+        System.out.println("Object 3: " + obj3.getName());
     }
 }
+
+
