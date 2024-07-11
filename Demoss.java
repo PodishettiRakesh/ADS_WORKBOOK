@@ -63,3 +63,82 @@
 //         rectangle.area();
 //     }
 // }
+
+
+
+// Design a base class `Employee` with methods for setting and getting basic salary, and subclasses `FullTime` 
+// and `PartTime` that add their own specific methods like `calculateSalary()` which include additional benefits or hourly rates.
+// public class Demoss {
+    
+//     // Base Class: Employee
+//     static class Employee {
+//         private double basicSalary;
+
+//         public void setBasicSalary(double basicSalary) {
+//             this.basicSalary = basicSalary;
+//         }
+
+//         public double getBasicSalary() {
+//             return basicSalary;
+//         }
+//     }
+
+//     // Subclass: FullTime
+//     static class FullTime extends Employee {
+//         private double benefits;
+
+//         public void setBenefits(double benefits) {
+//             this.benefits = benefits;
+//         }
+
+//         public double getBenefits() {
+//             return benefits;
+//         }
+
+//         public double calculateSalary() {
+//             return getBasicSalary() + benefits;
+//         }
+//     }
+
+//     // Subclass: PartTime
+//     static class PartTime extends Employee {
+//         private double hourlyRate;
+//         private int hoursWorked;
+
+//         public void setHourlyRate(double hourlyRate) {
+//             this.hourlyRate = hourlyRate;
+//         }
+
+//         public double getHourlyRate() {
+//             return hourlyRate;
+//         }
+
+//         public void setHoursWorked(int hoursWorked) {
+//             this.hoursWorked = hoursWorked;
+//         }
+
+//         public int getHoursWorked() {
+//             return hoursWorked;
+//         }
+
+//         public double calculateSalary() {
+//             return getBasicSalary() + (hourlyRate * hoursWorked);
+//         }
+//     }
+
+//     // Main method
+//     public static void main(String[] args) {
+//         // Full-time employee example
+//         FullTime fullTimeEmployee = new FullTime();
+//         fullTimeEmployee.setBasicSalary(50000);
+//         fullTimeEmployee.setBenefits(10000);
+//         System.out.println("Full-time employee salary: " + fullTimeEmployee.calculateSalary());
+
+//         // Part-time employee example
+//         PartTime partTimeEmployee = new PartTime();
+//         partTimeEmployee.setBasicSalary(20000);
+//         partTimeEmployee.setHourlyRate(20);
+//         partTimeEmployee.setHoursWorked(80);
+//         System.out.println("Part-time employee salary: " + partTimeEmployee.calculateSalary());
+//     }
+// }
