@@ -126,19 +126,45 @@ import java.util.Scanner;
 
 // Task: Write a Java program that includes a class with a private
 //  integer field and a public getter for that field.
-public class Basics {
-    private int x;
+// public class Basics {
+//     private int x;
 
-    public Basics(int x) {
-        this.x = x;
+//     public Basics(int x) {
+//         this.x = x;
+//     }
+
+//     public int getX() {
+//         return this.x;
+//     }
+
+//     public static void main(String[] args) {
+//         Basics obj = new Basics(42);
+//         System.out.println("The value of x is: " + obj.getX());
+//     }
+// }
+
+
+
+// - Task: Create a Java class with a static method that 
+// calculates the area of a rectangle using parameters for width and height.
+
+public class Basics {
+
+    private int width;
+    private int height;
+
+    public Basics(int width, int height) {
+        this.width = width;
+        this.height = height;
     }
 
-    public int getX() {
-        return this.x;
+    public static int calculateArea(int width, int height) {
+        return width * height;
     }
 
     public static void main(String[] args) {
-        Basics obj = new Basics(42);
-        System.out.println("The value of x is: " + obj.getX());
+        Basics rectangle = new Basics(5, 10);
+        int area = calculateArea(rectangle.width, rectangle.height);
+        System.out.println("The area of the rectangle is: " + area);
     }
 }
