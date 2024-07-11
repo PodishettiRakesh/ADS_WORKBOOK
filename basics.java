@@ -173,71 +173,83 @@ import java.util.Scanner;
 
 // Implement a Java class with a private array of Strings. Include methods to add a string to the array and another 
 // method to remove a string from the array by shifting all elements.
-public class Basics {
-    private String[] array;
-    private int size;
-    private int capacity;
+// public class Basics {
+//     private String[] array;
+//     private int size;
+//     private int capacity;
 
-    public Basics(int capacity) {
-        this.capacity = capacity;
-        this.array = new String[capacity];
-        this.size = 0;
-    }
+//     public Basics(int capacity) {
+//         this.capacity = capacity;
+//         this.array = new String[capacity];
+//         this.size = 0;
+//     }
 
-    public void add(String element) {
-        if (size < capacity) {
-            array[size] = element;
-            size++;
-        } else {
-            System.out.println("Array is full. Cannot add more elements.");
-        }
-    }
+//     public void add(String element) {
+//         if (size < capacity) {
+//             array[size] = element;
+//             size++;
+//         } else {
+//             System.out.println("Array is full. Cannot add more elements.");
+//         }
+//     }
 
-    public void remove(String element) {
-        int index = indexOf(element);
-        if (index != -1) {
-            for (int i = index; i < size - 1; i++) {
-                array[i] = array[i + 1];
-            }
-            array[size - 1] = null;
-            size--;
-        } else {
-            System.out.println("Element not found in the array.");
-        }
-    }
+//     public void remove(String element) {
+//         int index = indexOf(element);
+//         if (index != -1) {
+//             for (int i = index; i < size - 1; i++) {
+//                 array[i] = array[i + 1];
+//             }
+//             array[size - 1] = null;
+//             size--;
+//         } else {
+//             System.out.println("Element not found in the array.");
+//         }
+//     }
 
     
-    private int indexOf(String element) {
-        for (int i = 0; i < size; i++) {
-            if (array[i].equals(element)) {
-                return i;
-            }
-        }
-        return -1;
-    }
+//     private int indexOf(String element) {
+//         for (int i = 0; i < size; i++) {
+//             if (array[i].equals(element)) {
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
 
 
-    public void printArray() {
-        System.out.print("Array elements: ");
-        for (int i = 0; i < size; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
-    }
+//     public void printArray() {
+//         System.out.print("Array elements: ");
+//         for (int i = 0; i < size; i++) {
+//             System.out.print(array[i] + " ");
+//         }
+//         System.out.println();
+//     }
+
+//     public static void main(String[] args) {
+//         Basics strArray = new Basics(10);
+
+//         strArray.add("rakesh");
+//         strArray.add("keerthi");
+//         strArray.add("kavya");
+//         strArray.add("ramudu");
+//         strArray.add("nithin");
+
+//         strArray.printArray();
+
+//         strArray.remove("kavya");
+//         strArray.printArray();
+//     }
+// }
+
+
+// Write a Java program that demonstrates autoboxing of an `int` to an `Integer`.
+public class Basics {
 
     public static void main(String[] args) {
-        Basics strArray = new Basics(10);
+        int primitiveInt = 42;
+        Integer boxedInteger = primitiveInt; // Autoboxing
 
-        strArray.add("rakesh");
-        strArray.add("keerthi");
-        strArray.add("kavya");
-        strArray.add("ramudu");
-        strArray.add("nithin");
-
-        strArray.printArray();
-
-        strArray.remove("kavya");
-        strArray.printArray();
+        System.out.println("Primitive int: " + primitiveInt);
+        System.out.println("Boxed Integer: " + boxedInteger);
     }
 }
-
