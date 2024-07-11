@@ -66,61 +66,79 @@ import java.util.Scanner;
 
 // Task: Write a Java program to create an array of objects of a class containing multiple attributes,
 //  then perform sorting based on one attribute without using built-in sort functions.
+// public class Basics {
+//     private String studentName;
+//     private String collegeName;
+//     private int studentID;
+
+//     public Basics(String studentName, String collegeName, int studentID) {
+//         this.studentName = studentName;
+//         this.collegeName = collegeName;
+//         this.studentID = studentID;
+//     }
+
+//     public String getStudentName() {
+//         return studentName;
+//     }
+
+//     public String getCollegeName() {
+//         return collegeName;
+//     }
+
+//     public int getStudentID() {
+//         return studentID;
+//     }
+
+//     public void display() {
+//         System.out.println("Student ID: " + studentID + ", Student Name: " + studentName + ", College Name: " + collegeName);
+//     }
+
+//     public static void main(String[] args) {
+//         Basics[] students = new Basics[5];
+//         students[0] = new Basics("Rakesh", "IIITH Hyderabad", 3);
+//         students[1] = new Basics("John", "MIT", 5);
+//         students[2] = new Basics("Alice", "Stanford", 1);
+//         students[3] = new Basics("Bob", "Harvard", 4);
+//         students[4] = new Basics("Charlie", "Caltech", 2);
+
+//         System.out.println("Before sorting:");
+//         for (Basics student : students) {
+//             student.display();
+//         }
+
+//         // Sorting based on studentID
+//         for (int i = 0; i < students.length - 1; i++) {
+//             for (int j = 0; j < students.length - 1 - i; j++) {
+//                 if (students[j].getStudentID() > students[j + 1].getStudentID()) {
+//                     Basics temp = students[j];
+//                     students[j] = students[j + 1];
+//                     students[j + 1] = temp;
+//                 }
+//             }
+//         }
+
+//         System.out.println("\nAfter sorting by studentID:");
+//         for (Basics student : students) {
+//             student.display();
+//         }
+//     }
+// }
+
+// Task: Write a Java program that includes a class with a private
+//  integer field and a public getter for that field.
 public class Basics {
-    private String studentName;
-    private String collegeName;
-    private int studentID;
+    private int x;
 
-    public Basics(String studentName, String collegeName, int studentID) {
-        this.studentName = studentName;
-        this.collegeName = collegeName;
-        this.studentID = studentID;
+    public Basics(int x) {
+        this.x = x;
     }
 
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public String getCollegeName() {
-        return collegeName;
-    }
-
-    public int getStudentID() {
-        return studentID;
-    }
-
-    public void display() {
-        System.out.println("Student ID: " + studentID + ", Student Name: " + studentName + ", College Name: " + collegeName);
+    public int getX() {
+        return this.x;
     }
 
     public static void main(String[] args) {
-        Basics[] students = new Basics[5];
-        students[0] = new Basics("Rakesh", "IIITH Hyderabad", 3);
-        students[1] = new Basics("John", "MIT", 5);
-        students[2] = new Basics("Alice", "Stanford", 1);
-        students[3] = new Basics("Bob", "Harvard", 4);
-        students[4] = new Basics("Charlie", "Caltech", 2);
-
-        System.out.println("Before sorting:");
-        for (Basics student : students) {
-            student.display();
-        }
-
-        // Sorting based on studentID
-        for (int i = 0; i < students.length - 1; i++) {
-            for (int j = 0; j < students.length - 1 - i; j++) {
-                if (students[j].getStudentID() > students[j + 1].getStudentID()) {
-                    Basics temp = students[j];
-                    students[j] = students[j + 1];
-                    students[j + 1] = temp;
-                }
-            }
-        }
-
-        System.out.println("\nAfter sorting by studentID:");
-        for (Basics student : students) {
-            student.display();
-        }
+        Basics obj = new Basics(42);
+        System.out.println("The value of x is: " + obj.getX());
     }
 }
-
