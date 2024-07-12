@@ -15,13 +15,7 @@ public class LinkedList {
             temp=temp.next;
         }
     }
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.insertAtBegin(23);
-        list.insertAtBegin(45);
-        list.printList();
-
-    }
+    
 
      // Medium Challenge: Delete by key
      public void deleteByKey(int key) {
@@ -52,6 +46,14 @@ public class LinkedList {
             current = next;
         }
         head = prev;
+    }
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.insertAtBegin(23);
+        list.insertAtBegin(45);
+        list.printList();
+
     }
     
 }
