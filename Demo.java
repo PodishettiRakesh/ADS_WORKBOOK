@@ -244,6 +244,23 @@
 
 // Hard Challenge:
 // - Task: Write a recursive function to compute Fibonacci numbers and analyze its time complexity in terms of Big O notation.
+// public class Demo {
+//     public static int fibonacci(int n) {
+//         if (n <= 1) {
+//             return n;
+//         }
+//         return fibonacci(n - 1) + fibonacci(n - 2);
+//     }
 
+//     public static void main(String[] args) {
+//         int n = 10; // You can change this value to test with other numbers
+//         int result = fibonacci(n);
+//         System.out.println("Fibonacci number at position " + n + " is: " + result);
+//     }
+// }
+// Time Complexity: The time complexity of this recursive Fibonacci function is 
+// 𝑂(2𝑛). This is because each call to fibonacci generates two additional calls, leading to an exponential growth in the number of calls.
+// Space Complexity: The space complexity is 
+// O(n), due to the depth of the recursion stack.
 
 
