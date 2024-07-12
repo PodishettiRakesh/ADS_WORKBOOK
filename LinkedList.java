@@ -22,6 +22,23 @@ public class LinkedList {
         list.printList();
 
     }
+
+     // Medium Challenge: Delete by key
+     public void deleteByKey(int key) {
+        Node temp = head, prev = null;
+
+        if (temp != null && temp.data == key) {
+            head = temp.next;
+            return;
+        }
+
+        while (temp != null && temp.data != key) {
+            prev = temp;
+            temp = temp.next;
+        }
+        if (temp == null) return;
+        prev.next = temp.next;
+    }
     
 }
 class Node{
