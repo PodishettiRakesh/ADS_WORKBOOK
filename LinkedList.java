@@ -8,10 +8,18 @@ public class LinkedList {
         head = newNode;
     }
 
+    public void printList(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.data+ " ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insertAtBegin(23);
         list.insertAtBegin(45);
+        list.printList();
 
     }
     
