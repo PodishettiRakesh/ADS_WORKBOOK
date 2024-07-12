@@ -214,9 +214,36 @@
 // }
 
 // Medium Challenge:
-// - Task: Implement a function that finds the median of an unsorted array. Discuss the time complexity if you first sort the array.
+// - Task: Implement a function that finds the median of an unsorted array. 
+// Discuss the time complexity if you first sort the array.
+// import java.util.Arrays;
+
+// public class Demo {
+//     public static double findMedian(int[] arr) {
+//         Arrays.sort(arr); // Sort the array first
+//         int n = arr.length;
+//         if (n % 2 == 0) {
+//             return (arr[n/2 - 1] + arr[n/2]) / 2.0;
+//         } else {
+//             return arr[n/2];
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {3, 1, 4, 2, 5}; // You can change this array to test with other numbers
+//         double median = findMedian(arr);
+//         System.out.println("Median is: " + median);
+//     }
+// }
+
+// Time Complexity: The time complexity of this function is dominated by the sorting step, which is 
+// O(nlogn). The subsequent median calculation is O(1).
+// Space Complexity: The space complexity is 
+// O(1), assuming the sorting algorithm used is in-place.
+
 
 // Hard Challenge:
 // - Task: Write a recursive function to compute Fibonacci numbers and analyze its time complexity in terms of Big O notation.
+
 
 
