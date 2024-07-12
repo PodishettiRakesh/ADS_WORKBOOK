@@ -139,3 +139,79 @@
 //         System.out.println("Number of swaps in Insertion Sort: " + insertionSwaps);
 //     }
 // }
+
+// Easy Challenge:
+// - Task: Create an ArrayList, add five elements to it, and print the element at the third index.
+
+// Medium Challenge:
+// - Task: Write a program using ArrayList to take an unknown number of strings from input until an empty string is entered, then print each string in reverse order.
+
+// Hard Challenge:
+// - Task: Implement a function using ArrayList that simulates removing every second element in an array of integers until only one element remains, and return that element.
+
+
+// import java.util.ArrayList;
+// import java.util.Scanner;
+
+// public class ArrayListChallenges {
+
+//     // Easy Challenge
+//     public static void easyChallenge() {
+//         ArrayList<String> list = new ArrayList<>();
+//         list.add("Element1");
+//         list.add("Element2");
+//         list.add("Element3");
+//         list.add("Element4");
+//         list.add("Element5");
+
+//         System.out.println("Element at the third index: " + list.get(3));
+//     }
+
+//     // Medium Challenge
+//     public static void mediumChallenge() {
+//         Scanner scanner = new Scanner(System.in);
+//         ArrayList<String> list = new ArrayList<>();
+        
+//         System.out.println("Enter strings (enter an empty string to stop):");
+//         while (true) {
+//             String input = scanner.nextLine();
+//             if (input.isEmpty()) {
+//                 break;
+//             }
+//             list.add(input);
+//         }
+
+//         System.out.println("Strings in reverse order:");
+//         for (int i = list.size() - 1; i >= 0; i--) {
+//             System.out.println(list.get(i));
+//         }
+
+//         scanner.close();
+//     }
+
+//     // Hard Challenge
+//     public static int hardChallenge(ArrayList<Integer> list) {
+//         int index = 0;
+//         while (list.size() > 1) {
+//             index = (index + 1) % list.size();
+//             list.remove(index);
+//         }
+//         return list.get(0);
+//     }
+
+//     public static void main(String[] args) {
+//         // Easy Challenge
+//         easyChallenge();
+
+//         // Medium Challenge
+//         mediumChallenge();
+
+//         // Hard Challenge
+//         ArrayList<Integer> list = new ArrayList<>();
+//         for (int i = 1; i <= 10; i++) {
+//             list.add(i);
+//         }
+//         int lastRemaining = hardChallenge(list);
+//         System.out.println("Last remaining element: " + lastRemaining);
+//     }
+// }
